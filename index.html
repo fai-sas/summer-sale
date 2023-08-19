@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Summer Sale</title>
+    <style>
+      .btn {
+        color: white;
+      }
+      .btn:hover {
+        background-color: rgb(34 211 238);
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container p-8 mx-auto">
+      <h1 class="pt-12 text-4xl font-bold">Kitchenware</h1>
+      <section class="grid gap-4 py-12 md:grid-cols-4">
+        <!-- card block -->
+
+        <header class="grid grid-cols-1 gap-4 md:col-span-3 md:grid-cols-3">
+          <!-- card heading -->
+          <!-- card 1 -->
+          <div onclick="handleClick(this)" id="card-1" class="shadow-xl card">
+            <figure class="px-4 py-4 m-8 mb-0 bg-base-200">
+              <img src="./assets/prod1.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="items-center text-center card-body">
+              <div class="pt-0 rating">
+                <input
+                  type="radio"
+                  name="rating-1"
+                  class="bg-orange-400 mask mask-star-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="bg-orange-400 mask mask-star-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-3"
+                  class="bg-orange-400 mask mask-star-2 checked"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="bg-orange-400 mask mask-star-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-5"
+                  class="bg-orange-400 mask mask-star-2"
+                />
+              </div>
+              <h2 class="card-title">K. Accessories</h2>
+              <p><span id="product-price">39.00</span> TK</p>
+            </div>
+          </div>
+          <!-- end of card 1 -->
+
+          <!-- card 2 -->
+          <div onclick="handleClick(this)" id="card-2" class="shadow-xl card">
+            <figure class="px-4 py-4 m-8 mb-0 bg-base-200">
+              <img src="./assets/prod2.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="items-center text-center card-body">
+              <div class="pt-0 rating">
+                <input
+                  type="radio"
+                  name="rating-1"
+                  class="bg-orange-400 mask mask-star-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="bg-orange-400 mask mask-star-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-3"
+                  class="bg-orange-400 mask mask-star-2 checked"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="bg-orange-400 mask mask-star-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-5"
+                  class="bg-orange-400 mask mask-star-2"
+                />
+              </div>
+              <h2 class="card-title">K. Accessories</h2>
+              <p><span id="product-price">25.00</span> TK</p>
+            </div>
+          </div>
+          <!-- end of card 2 -->
+
+          <!-- card 3 -->
+          <div onclick="handleClick(this)" id="card-3" class="shadow-xl card">
+            <figure class="px-4 py-4 m-8 mb-0 bg-base-200">
+              <img src="./assets/prod3.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="items-center text-center card-body">
+              <div class="pt-0 rating">
+                <input
+                  type="radio"
+                  name="rating-1"
+                  class="bg-orange-400 mask mask-star-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-2"
+                  class="bg-orange-400 mask mask-star-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-3"
+                  class="bg-orange-400 mask mask-star-2 checked"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="bg-orange-400 mask mask-star-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-5"
+                  class="bg-orange-400 mask mask-star-2"
+                />
+              </div>
+              <h2 class="card-title">Home Cooker</h2>
+              <p><span id="product-price">49.00</span> TK</p>
+            </div>
+          </div>
+          <!-- end of card 3 -->
+        </header>
+
+        <!-- result block -->
+        <article class="px-8">
+          <h1 class="py-8 text-2xl font-bold">Have coupon?</h1>
+          <div class="form-control">
+            <!-- <label class="label">
+              <span class="label-text">Apply</span>
+            </label> -->
+            <label class="input-group">
+              <input
+                id="coupon-code"
+                type="text"
+                placeholder="Coupon Code"
+                class="w-40 input input-bordered"
+              />
+              <!-- <span class="bg-[#E527B2] text-white">Apply</span> -->
+              <button class="py-2 btn btn-secondary">Make Purchase</button>
+            </label>
+          </div>
+          <div
+            id="calculation-entry"
+            class="flex flex-col gap-4 pt-8 overflow-x-auto"
+          ></div>
+          <hr />
+          <div class="py-8">
+            <p class="py-2 font-bold">
+              Total Price:
+              <span id="total-price" class="font-normal">00 Taka</span>
+            </p>
+            <p class="py-2 font-bold">
+              Discount: <span class="font-normal">00 Taka</span>
+            </p>
+            <p class="py-2 font-bold">
+              Total: <span class="font-normal">00 Taka</span>
+            </p>
+            <hr />
+            <button class="py-2 btn btn-secondary">Make Purchase</button>
+          </div>
+        </article>
+      </section>
+    </main>
+    <script src="./calculate.js"></script>
+  </body>
+</html>
