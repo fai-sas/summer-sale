@@ -162,7 +162,9 @@
                 class="w-40 input input-bordered"
               />
               <!-- <span class="bg-[#E527B2] text-white">Apply</span> -->
-              <button class="py-2 btn btn-secondary">Make Purchase</button>
+              <button disabled id="coupon-btn" class="py-2 btn btn-secondary">
+                Apply
+              </button>
             </label>
           </div>
           <div
@@ -176,17 +178,46 @@
               <span id="total-price" class="font-normal">00 Taka</span>
             </p>
             <p class="py-2 font-bold">
-              Discount: <span class="font-normal">00 Taka</span>
+              Discount:
+              <span id="discount-amount" class="font-normal">00 </span>
             </p>
             <p class="py-2 font-bold">
-              Total: <span class="font-normal">00 Taka</span>
+              Total: <span id="final-price" class="font-normal">00</span>
             </p>
             <hr />
-            <button class="py-2 btn btn-secondary">Make Purchase</button>
+            <!-- <button id="purchase-btn" disabled class="py-2 btn btn-secondary">
+              Make Purchase
+            </button> -->
+            <!-- Open the modal using ID.showModal() method -->
+            <button
+              id="purchase-btn"
+              disabled
+              class="py-2 btn btn-secondary"
+              onclick="my_modal.showModal()"
+            >
+              Make Purchase
+            </button>
+            <dialog
+              id="my_modal"
+              class="text-center modal modal-bottom sm:modal-middle"
+            >
+              <form method="dialog" class="modal-box">
+                <img src="./assets/congo.png" class="mx-auto" alt="" />
+                <h3 class="text-lg font-bold">Congratulations</h3>
+                <p class="py-4">Your Purchase the product</p>
+                <div class="modal-action">
+                  <!-- if there is a button in form, it will close the modal -->
+                  <button onclick="goHome()" class="mx-auto btn btn-secondary">
+                    Go Home
+                  </button>
+                </div>
+              </form>
+            </dialog>
           </div>
         </article>
       </section>
     </main>
+    <script src="./utils.js"></script>
     <script src="./calculate.js"></script>
   </body>
 </html>
