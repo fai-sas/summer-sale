@@ -8,6 +8,12 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Summer Sale</title>
@@ -16,12 +22,38 @@
         color: white;
       }
       .btn:hover {
-        background-color: rgb(34 211 238);
+        background-color: rgb(192 38 211);
         color: black;
+      }
+      body {
+        font-family: 'Work Sans', sans-serif;
       }
     </style>
   </head>
   <body>
+    <section class="bg-[#F9F6E2]">
+      <header
+        class="container grid px-16 mx-auto md:grid-cols-2 place-items-center"
+      >
+        <article class="text-center">
+          <p class="py-12 text-4xl">---SALE FEVER---</p>
+          <h1 class="text-6xl font-bold leading-snug">
+            Purchase TK 200 or<br />above & get
+            <span class="text-[#E527B2]">20% off</span>
+          </h1>
+          <div class="flex items-center justify-center gap-4 py-12">
+            <p class="text-2xl font-semibold">Use Promo Code</p>
+            <button class="text-2xl font-semibold btn btn-secondary">
+              SELL200
+            </button>
+          </div>
+        </article>
+        <div>
+          <img src="./assets/Summer.png" alt="" />
+        </div>
+      </header>
+    </section>
+
     <main class="container p-8 mx-auto">
       <h1 class="pt-12 text-4xl font-bold">Kitchenware</h1>
       <section class="grid gap-4 py-12 md:grid-cols-4">
@@ -175,14 +207,21 @@
           <div class="py-8">
             <p class="py-2 font-bold">
               Total Price:
-              <span id="total-price" class="font-normal">00 Taka</span>
+              <span id="total-price" class="font-normal text-[#11111180]"
+                >00</span
+              ><span class="font-normal text-[#11111180]"> Tk.</span>
             </p>
             <p class="py-2 font-bold">
               Discount:
-              <span id="discount-amount" class="font-normal">00 </span>
+              <span id="discount-amount" class="text-[#11111180] font-normal"
+                >00</span
+              ><span class="font-normal text-[#11111180]"> Tk.</span>
             </p>
             <p class="py-2 font-bold">
-              Total: <span id="final-price" class="font-normal">00</span>
+              Total:
+              <span id="final-price" class="font-normal text-[#11111180]"
+                >00</span
+              ><span class="font-normal text-[#11111180]"> Tk.</span>
             </p>
             <hr />
             <!-- <button id="purchase-btn" disabled class="py-2 btn btn-secondary">

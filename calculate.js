@@ -22,8 +22,9 @@ function handleClick(target) {
     target.childNodes[3].childNodes[5].innerText.split(' ')[0]
 
   totalPrice = parseFloat(totalPrice) + parseFloat(productPriceString)
+  totalPriceTwoDecimal = totalPrice.toFixed(2)
 
-  setNewValue('total-price', totalPrice)
+  setNewValue('total-price', totalPriceTwoDecimal)
 
   if (totalPrice > 0) {
     purchaseBtn.removeAttribute('disabled')
@@ -36,7 +37,7 @@ const couponBtn = document.getElementById('coupon-btn')
 couponCode.addEventListener('keyup', function (event) {
   const couponCodValue = event.target.value
 
-  if (couponCodValue === 'SELL20') {
+  if (couponCodValue === 'SELL200') {
     couponBtn.removeAttribute('disabled')
   } else {
     couponBtn.setAttribute('disabled', true)
@@ -46,13 +47,21 @@ couponCode.addEventListener('keyup', function (event) {
 couponBtn.addEventListener('click', function () {
   const totalPriceDiv = getElementValue('total-price')
   const discountValue = totalPriceDiv * 0.2
-  setNewValue('discount-amount', discountValue)
+  const discountValueTwoDecimal = discountValue.toFixed(2)
+
+  if (totalPriceDiv >= 200) {
+    setNewValue('discount-amount', discountValueTwoDecimal)
+  } else {
+    alert('you need to purchase taka 200 or more to be eligible for discount')
+  }
 
   const totalDiscountValue = getElementValue('discount-amount')
 
   const finalPrice = totalPriceDiv - totalDiscountValue
 
-  setNewValue('final-price', finalPrice)
+  const finalPriceTwoDecimal = finalPrice.toFixed(2)
+
+  setNewValue('final-price', finalPriceTwoDecimal)
 
   couponCode.value = ''
   couponBtn.setAttribute('disabled', true)
