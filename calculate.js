@@ -25,6 +25,7 @@ function handleClick(target) {
   totalPriceTwoDecimal = totalPrice.toFixed(2)
 
   setNewValue('total-price', totalPriceTwoDecimal)
+  setNewValue('final-price', totalPriceTwoDecimal)
 
   const couponBtn = document.getElementById('coupon-btn')
 
