@@ -33,17 +33,17 @@
   <body>
     <section class="bg-[#F9F6E2]">
       <header
-        class="container grid px-16 mx-auto md:grid-cols-2 place-items-center"
+        class="container grid px-16 mx-auto lg:grid-cols-2 place-items-center"
       >
         <article class="text-center">
-          <p class="py-12 text-4xl">---SALE FEVER---</p>
-          <h1 class="text-6xl font-bold leading-snug">
+          <p class="py-12 text-2xl lg:text-4xl">---SALE FEVER---</p>
+          <h1 class="text-4xl font-bold leading-snug lg:text-6xl">
             Purchase TK 200 or<br />above & get
             <span class="text-[#E527B2]">20% off</span>
           </h1>
-          <div class="flex items-center justify-center gap-4 py-12">
-            <p class="text-2xl font-semibold">Use Promo Code</p>
-            <button class="text-2xl font-semibold btn btn-secondary">
+          <div class="flex items-center justify-center gap-2 py-12 lg:gap-4">
+            <p class="text-lg font-semibold lg:text-2xl">Use Promo Code</p>
+            <button class="text-lg font-semibold lg:text-2xl btn btn-secondary">
               SELL200
             </button>
           </div>
@@ -55,13 +55,13 @@
     </section>
 
     <!-- Section 1 -->
-    <main class="container grid gap-4 p-8 py-12 mx-auto md:grid-cols-4">
-      <header class="md:col-span-3">
+    <main class="container grid gap-4 p-8 py-12 mx-auto lg:grid-cols-4">
+      <header class="lg:col-span-3">
         <section class="container mx-auto">
           <h1 class="pt-12 text-4xl font-bold">Kitchenware</h1>
           <article class="grid gap-4 py-12 md:grid-cols-3">
             <!-- card 1 -->
-            <div onclick="handleClick(this)" id="card-1" class="shadow-xl card">
+            <div onclick="handleClick(this)" id="card-2" class="shadow-xl card">
               <figure class="px-4 py-4 m-8 mb-0 bg-base-200">
                 <img src="./assets/prod1.png" alt="Shoes" class="rounded-xl" />
               </figure>
@@ -69,7 +69,12 @@
                 <div class="pt-0 rating">
                   <input
                     type="radio"
-                    name="rating-1"
+                    name="rating-2"
+                    class="bg-orange-400 mask mask-star-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-2"
                     class="bg-orange-400 mask mask-star-2"
                   />
                   <input
@@ -79,22 +84,17 @@
                   />
                   <input
                     type="radio"
-                    name="rating-3"
+                    name="rating-2"
                     class="bg-orange-400 mask mask-star-2"
                   />
                   <input
                     type="radio"
-                    name="rating-4"
-                    class="bg-orange-400 mask mask-star-2"
-                  />
-                  <input
-                    type="radio"
-                    name="rating-5"
+                    name="rating-2"
                     class="bg-orange-400 mask mask-star-2"
                   />
                 </div>
-                <h2 class="card-title">K. Accessories</h2>
-                <p><span id="product-price">39.00</span> TK</p>
+                <h2 class="text-xl card-title">K. Accessories</h2>
+                <p class="text-xl"><span id="product-price">39.00</span> TK</p>
               </div>
             </div>
             <!-- end of card 1 -->
@@ -131,8 +131,8 @@
                     class="bg-orange-400 mask mask-star-2"
                   />
                 </div>
-                <h2 class="card-title">K. Accessories</h2>
-                <p><span id="product-price">25.00</span> TK</p>
+                <h2 class="text-xl card-title">K. Accessories</h2>
+                <p class="text-xl"><span id="product-price">25.00</span> TK</p>
               </div>
             </div>
             <!-- end of card 2 -->
@@ -169,8 +169,8 @@
                     class="bg-orange-400 mask mask-star-2"
                   />
                 </div>
-                <h2 class="card-title">Home Cooker</h2>
-                <p><span id="product-price">49.00</span> TK</p>
+                <h2 class="text-xl card-title">Home Cooker</h2>
+                <p class="text-xl"><span id="product-price">49.00</span> TK</p>
               </div>
             </div>
             <!-- end of card 3 -->
@@ -215,8 +215,8 @@
                     class="bg-orange-400 mask mask-star-2"
                   />
                 </div>
-                <h2 class="card-title">Sports Back Cap</h2>
-                <p><span id="product-price">49.00</span> TK</p>
+                <h2 class="text-xl card-title">Sports Back Cap</h2>
+                <p class="text-xl"><span id="product-price">49.00</span> TK</p>
               </div>
             </div>
             <!-- end of card 1 -->
@@ -253,8 +253,8 @@
                     class="bg-orange-400 mask mask-star-2"
                   />
                 </div>
-                <h2 class="card-title">Full Jersey Set</h2>
-                <p><span id="product-price">69.00</span> TK</p>
+                <h2 class="text-xl card-title">Full Jersey Set</h2>
+                <p class="text-xl"><span id="product-price">69.00</span> TK</p>
               </div>
             </div>
             <!-- end of card 2 -->
@@ -291,8 +291,8 @@
                     class="bg-orange-400 mask mask-star-2"
                   />
                 </div>
-                <h2 class="card-title">Sports cades</h2>
-                <p><span id="product-price">159.00</span> TK</p>
+                <h2 class="text-xl card-title">Sports cades</h2>
+                <p class="text-xl"><span id="product-price">159.00</span> TK</p>
               </div>
             </div>
             <!-- end of card 3 -->
@@ -337,8 +337,8 @@
                     class="bg-orange-400 mask mask-star-2"
                   />
                 </div>
-                <h2 class="card-title">Single Relax Chair</h2>
-                <p><span id="product-price">185.00</span> TK</p>
+                <h2 class="text-xl card-title">Single Relax Chair</h2>
+                <p class="text-xl"><span id="product-price">185.00</span> TK</p>
               </div>
             </div>
             <!-- end of card 1 -->
@@ -375,8 +375,8 @@
                     class="bg-orange-400 mask mask-star-2"
                   />
                 </div>
-                <h2 class="card-title">Children play</h2>
-                <p><span id="product-price">299.00</span> TK</p>
+                <h2 class="text-xl card-title">Children play</h2>
+                <p class="text-xl"><span id="product-price">299.00</span> TK</p>
               </div>
             </div>
             <!-- end of card 2 -->
@@ -413,8 +413,8 @@
                     class="bg-orange-400 mask mask-star-2"
                   />
                 </div>
-                <h2 class="card-title">Flexible Sofa</h2>
-                <p><span id="product-price">339.00</span> TK</p>
+                <h2 class="text-xl card-title">Flexible Sofa</h2>
+                <p class="text-xl"><span id="product-price">339.00</span> TK</p>
               </div>
             </div>
             <!-- end of card 3 -->

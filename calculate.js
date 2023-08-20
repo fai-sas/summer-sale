@@ -12,7 +12,7 @@ function handleClick(target) {
 
   productDiv.innerHTML = `
   <div class='flex items-center gap-2 text-2xl font-semibold px-8 py-2 '>
-  <p>${count + 1}</p>
+  <p>${count + 1}. </p>
   <li class='py-2 list-none'>${productName}</li>
   </div>
   `
